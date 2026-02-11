@@ -8,11 +8,27 @@ import EmptyState from './components/ExpenseTracker/EmptyState';
 import './App.css'
 
 function App() {
-  const [transactions, setTransactions] = useState([]);
+  const [transactions, setTransactions] = useState([])
 
   const addTransaction = (newTransaction) => {
-    setTransactions([newTransaction, ...transactions]);
-  };
+    setTransactions([newTransaction, ...transactions])
+  }
+
+
+  const deleteTransaction = (id) => {
+    setTransactions(transactions.filter(transaction => transaction.id !== id))
+  }
+
+  const clearAllTransactions = () => {
+    setTransactions([])
+  }
+
+
+
+  // KPIs Calculation
+  const income = transactions.filter(t => t)
+
+
 
   return (
     <div className='w-full min-h-screen bg-slate-50 p-4 md:p-8 font-sans'>
