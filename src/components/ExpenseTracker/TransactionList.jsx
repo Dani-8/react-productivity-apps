@@ -1,7 +1,7 @@
 import TransactionItems from "./TransactionItems"
 import EmptyState from "./EmptyState"
 
-export default function TransactionList({ transactions, onDelete, onClearAllTransactions }){
+export default function TransactionList({ transactions, deleteTransaction, onClearAllTransactions }){
     return(
         <div className="space-y-5">
             <div className="flex items-center justify-between px-1">
@@ -18,7 +18,7 @@ export default function TransactionList({ transactions, onDelete, onClearAllTran
                 <EmptyState />
             ) : (
                 transactions.map((item) => {
-                    <TransactionItems key={item.id} transaction={item} onDelete={onDelete} />
+                    return <TransactionItems key={item.id} transaction={item} deleteTransaction={deleteTransaction} />
                 })
             )}
 

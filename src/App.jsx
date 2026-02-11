@@ -41,7 +41,7 @@ function App() {
 
         <TransactionForm onAdd={addTransaction} />
 
-        <TransactionList transactions={transactions} onDelete={deleteTransaction} onClearAllTransactions={clearAllTransactions} />
+        <TransactionList transactions={transactions} deleteTransaction={deleteTransaction} onClearAllTransactions={clearAllTransactions} />
 
       </div>
     </div>
