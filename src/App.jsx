@@ -26,8 +26,9 @@ function App() {
 
 
   // KPIs Calculation
-  const income = transactions.filter(t => t)
-
+  const income = transactions.filter(t => t.type === "income").reduce((acc, t) => acc + t.amount, 0)
+  const expense = transactions.filter(t => t.type === "expense").reduce((acc, t) => acc + t.amount, 0)
+  const balance = income - expense
 
 
   return (
@@ -36,15 +37,11 @@ function App() {
 
         <Header />
 
-        <KpiCards income={1000} expense={500} balance={500} />
+        <KpiCards income={income} expense={expense} balance={balance} />
 
         <TransactionForm onAdd={addTransaction} />
 
-        <TransactionList />
-
-        {/* <TransactionItems /> */}
-
-        {/* <EmptyState /> */}
+        <TransactionList transactions={transactions} onDelete={deleteTransaction} onClearAllTransactions={clearAllTransactions} />
 
       </div>
     </div>

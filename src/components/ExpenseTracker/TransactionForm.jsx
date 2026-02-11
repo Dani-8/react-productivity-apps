@@ -13,7 +13,7 @@ export default function TransactionForm({ onAdd }) {
 
         onAdd({
             id: Date.now(),
-            description,
+            title,
             amount: parseFloat(amount),
             type,
             category,
