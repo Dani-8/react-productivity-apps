@@ -5,7 +5,7 @@ export default function TransactionForm({ onAdd }) {
     const [description, setDescription] = useState("");
     const [amount, setAmount] = useState("");
     const [type, setType] = useState("expense");
-    const [category, setCategory] = useState("other");
+    const [category, setCategory] = useState("food");
 
 
     function handleSubmit(e) {
