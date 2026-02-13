@@ -5,7 +5,10 @@ import StatsCards from "./components/StatsCards"
 import TodoInput from "./components/TodoInput"
 import Filters from "./components/Filters"
 import EmptyState from "./components/EmptyState"
-
+import TodoItem from "./components/TodoItem"
+// ====================================================
+// ====================================================
+// ====================================================
 
 function Todo() {
     return (
@@ -17,7 +20,7 @@ function Todo() {
 
                 <TodoInput />
 
-                <EmptyState 
+                <TodoItem 
 
                 />
             </div>
