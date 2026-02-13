@@ -1,5 +1,7 @@
 import { Wallet, CheckSquare } from 'lucide-react';
 import AppCard from './AppCard';
+
+
 export default function AppCardsList() {
     return (
         <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>

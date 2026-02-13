@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { PlusCircle } from 'lucide-react';
 
 export default function TransactionForm({ onAdd }) {
+    const [error, setError] = useState("");
     const [description, setDescription] = useState("");
     const [amount, setAmount] = useState("");
     const [type, setType] = useState("expense");
@@ -10,6 +11,16 @@ export default function TransactionForm({ onAdd }) {
 
     function handleSubmit(e) {
         e.preventDefault();
+
+        if(!description && !amount || amount <= 0){
+            setError("Please enter valid description and amount.")
+            
+            setTimeout(() => {
+                setError("")
+            }, 2500)
+            
+            return
+        }
 
         onAdd({
             id: Date.now(),
@@ -25,7 +36,12 @@ export default function TransactionForm({ onAdd }) {
     }
 
     return (
+
+
         <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 shadow-sm mb-8 border border-slate-200">
+            {error && (
+                <p className="text-red-500 text-sm mb-3">{error}</p>
+            )}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="lg:col-span-2">
                     <input type="text" placeholder="Description (e.g. Salary, Rent)"
