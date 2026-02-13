@@ -1,13 +1,15 @@
-// import React, {useState} from "react"
+import React, {useState} from "react"
 
+import Header from "./components/Header"
 
 
 function Todo() {
     return (
+        <div className="min-h-screen p-4 md:p-12 font-sans text-slate-900 bg-[#F8FAFC]">
+            <div className="max-w-4xl mx-auto">
+                <Header />
 
-        <div className="min-h-screen bg-slate-50 p-4">
-            <h1 className="text-3xl font-bold">Todo App</h1>
-            <p>Coming soon! Add your todo components here.</p>
+            </div>
         </div>
     )
 }

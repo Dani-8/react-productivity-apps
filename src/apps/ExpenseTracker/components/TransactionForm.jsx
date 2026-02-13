@@ -14,7 +14,7 @@ export default function TransactionForm({ onAdd }) {
 
         if(!description && !amount || amount <= 0){
             setError("Please enter valid description and amount.")
-            
+
             setTimeout(() => {
                 setError("")
             }, 2500)
@@ -36,8 +36,6 @@ export default function TransactionForm({ onAdd }) {
     }
 
     return (
-
-
         <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 shadow-sm mb-8 border border-slate-200">
             {error && (
                 <p className="text-red-500 text-sm mb-3">{error}</p>
