@@ -4,7 +4,7 @@
 export default function TodoList(){
     return(
         <div className="space-y-3">
-            <TodoItem />
+            {/* <TodoItem /> */}
         </div>
     )
 }

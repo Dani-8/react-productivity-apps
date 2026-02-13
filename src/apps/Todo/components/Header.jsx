@@ -1,7 +1,7 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function Header({ progress }) {
+export default function Header({ progress, total, complete }) {
     return (
         <header className="mb-8">
             <Link to="/" className="inline-flex items-center gap-1 text-sm text-slate-500 hover:text-indigo-600 mb-3">
@@ -35,7 +35,7 @@ export default function Header({ progress }) {
                                 className="text-indigo-600 transition-all duration-500 ease-out"
                             />
                         </svg>
-                        <span className="text-xs font-black">{2}/{4}</span>
+                        <span className="text-xs font-black">{complete}/{total}</span>
                     </div>
                 </div>
             </div>
