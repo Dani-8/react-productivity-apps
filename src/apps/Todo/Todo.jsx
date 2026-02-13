@@ -1,11 +1,15 @@
-import React, {useState} from "react"
+// import React, {useState} from "react"
 
 
 
 function Todo(){
     return (
 
-        <h2>todo</h2>
+        <h1 className="text-center text-5xl">todo</h1>
 
     )
 }
+
+
+
+export default Todo
