@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 
 import Header from "./components/Header"
+import StatsCards from "./components/StatsCards"
 
 
 function Todo() {
@@ -9,6 +10,8 @@ function Todo() {
             <div className="max-w-4xl mx-auto">
                 <Header />
 
+
+                <StatsCards />
             </div>
         </div>
     )

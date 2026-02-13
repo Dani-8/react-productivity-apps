@@ -5,7 +5,7 @@ function Header(){
         <header className='flex justify-between items-center mb-10'>
             <div>
                 <div className='flex items-center gap-2 mb-2'>
-                    <div className='bg-indigo-600 text-white p-3 rounded-2xl'>
+                    <div className='bg-gradient-to-tr from-indigo-600 via-indigo-800 to-indigo-400 text-white p-3 rounded-2xl shadow-xl shadow-indigo-800/40'>
                         <LayoutDashboard size={25} />
                     </div>
                     <h2 className='text-2xl font-bold'>App Portal</h2>
