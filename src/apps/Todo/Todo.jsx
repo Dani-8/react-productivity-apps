@@ -3,6 +3,8 @@ import React, {useState} from "react"
 import Header from "./components/Header"
 import StatsCards from "./components/StatsCards"
 import TodoInput from "./components/TodoInput"
+import Filters from "./components/Filters"
+import EmptyState from "./components/EmptyState"
 
 
 function Todo() {
@@ -14,6 +16,10 @@ function Todo() {
                 <StatsCards total={10} pending={5} completed={5} />
 
                 <TodoInput />
+
+                <EmptyState 
+
+                />
             </div>
         </div>
     )

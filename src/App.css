@@ -31,3 +31,21 @@
 .stat-card:hover{
     transform: scale(1.03);
 }
+
+
+.filter-btn {
+    display: flex;
+    position: relative;
+    padding-right: 20px;    
+}
+
+.filter-btn:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 60%; /* adjust height as needed */
+    background-color: rgb(172, 172, 172);
+}

@@ -36,7 +36,7 @@ export default function StatsCards({total, pending, completed}){
 
 
     return(
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
             {
                 cards.map((card, i) => (
                     <div key={i} className={`stat-card group bg-white p-4 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-200 ${card.hoverBorderColor} transition duration-300 flex items-center gap-4`}>
