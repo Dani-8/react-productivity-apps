@@ -3,10 +3,10 @@ import { CheckCircle2, Circle, Calendar, Edit3, Trash2, Save, X } from 'lucide-r
 
 export default function TodoItem({todo, isEditing, editText, setEditText, onToggle, onDelete, onSaveEdit, onStartEdit, onCancelEdit}) {
     return (
-        <div className={`cursor-pointer group bg-white p-4 rounded-xl shadow-lg border border-slate-200 hover:border-indigo-400 transition-all duration-300`}>
+        <div className={`flex items-center justify-bbetween group bg-white p-4 rounded-2xl shadow-lg border border-slate-200 hover:border-indigo-400 transition-all duration-300`}>
 
 
-            <div className='flex items-center gap-3 '>
+            <div className='flex items-center gap-3 flex-1'>
                 <button onClick={onToggle} className={`transition-colors ${todo.completed ? 'text-indigo-500' : 'text-slate-300 hover:text-indigo-400'}`}>
                     {todo.completed ? <CheckCircle2 size={24} /> : <Circle size={24} />}
                 </button>
@@ -35,19 +35,19 @@ export default function TodoItem({todo, isEditing, editText, setEditText, onTogg
             <div className='flex items-center gap-1'>
                 {isEditing ? (
                     <>
-                        <button onClick={onSaveEdit} className="p-2 text-emerald-500 hover:bg-emerald-50 rounded-lg">
+                        <button onClick={onSaveEdit} className="cursor-pointer p-2 text-emerald-500 hover:bg-emerald-50 rounded-lg">
                             <Save size={18} />
                         </button>
-                        <button onClick={onCancelEdit} className="p-2 text-slate-400 hover:bg-slate-50 rounded-lg">
+                        <button onClick={onCancelEdit} className="cursor-pointer p-2 text-slate-400 hover:bg-slate-50 rounded-lg">
                             <X size={18} />
                         </button>
                     </>
                 ) : (
                     <>
-                        <button onClick={onStartEdit} className="text-slate-200 hover:text-indigo-500 transition-colors p-2 md:opacity-0 group-hover:opacity-100">
+                        <button onClick={onStartEdit} className="cursor-pointer text-slate-200 hover:text-indigo-500 transition-colors p-2 md:opacity-0 group-hover:opacity-100">
                             <Edit3 size={18} />
                         </button>
-                        <button onClick={onDelete} className="text-slate-200 hover:text-rose-500 transition-colors p-2 md:opacity-0 group-hover:opacity-100">
+                        <button onClick={onDelete} className="cursor-pointer text-slate-200 hover:text-rose-500 transition-colors p-2 md:opacity-0 group-hover:opacity-100">
                             <Trash2 size={18} />
                         </button>
                     </>
