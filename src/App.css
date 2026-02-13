@@ -5,3 +5,19 @@
     max-width: 100%;
     padding: 0;
 }
+
+.app-card{
+    padding: 30px;
+    text-align: left;
+    border-radius: 20px;
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.app-card:hover{
+    transform: translatey(-5px);
+}
+.app-card:active{
+    transform: scale(0.9);
+}
