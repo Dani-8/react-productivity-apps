@@ -9,7 +9,7 @@ export default function AppCardsList() {
                 to="/apps/ExpenseTracker/ExpenseTracker"
                 icon={<Wallet size={40} />}
                 iconBg="bg-emerald-50"
-                iconColor="text-emerald-600"
+                iconColor="text-emerald-700"
                 title="Expense Tracker"
                 descp="Full control over your budget. Log expenses, analyze spending, and save more."
             />
@@ -17,7 +17,7 @@ export default function AppCardsList() {
                 to="/apps/Todo/Todo"
                 icon={<CheckSquare size={32} />}
                 iconBg="bg-indigo-50"
-                iconColor="text-indigo-600"
+                iconColor="text-indigo-700"
                 title="Todo App"
                 descp="The ultimate productivity tool. Track tasks, set goals, and get things done."
             />

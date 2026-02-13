@@ -6,7 +6,7 @@ export default function AppCard({to, title, descp, icon, iconBg, iconColor }){
     return (
         <Link to={to}>
             <button className='app-card group shadow-xl shadow-slate-200/50 hover:shadow-slate-400/30 border border-slate-300 hover:border-indigo-500'>
-                <div className={`w-14 h-14 ${iconBg} ${iconColor} group-hover:scale-110 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                <div className={`w-14 h-14 ${iconBg} ${iconColor} group-hover:scale-110 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     {icon}
                 </div>
                 <h2 className='text-lg font-bold mb-2'>{title}</h2>

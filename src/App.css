@@ -21,3 +21,13 @@
 .app-card:active{
     transform: scale(0.9);
 }
+
+
+
+/* TODO APP'S STATSCARDS */
+.stat-card{
+    transition: 0.3s ease;
+}
+.stat-card:hover{
+    transform: scale(1.03);
+}
